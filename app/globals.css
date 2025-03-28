@@ -1,0 +1,84 @@
+/* Import Tailwind CSS base styles */
+@tailwind base;
+/* Import Tailwind CSS component styles */
+@tailwind components;
+/* Import Tailwind CSS utility styles */
+@tailwind utilities;
+
+/* Define base styles for the light and dark themes */
+@layer base {
+  /* Root variables for light theme */
+  :root {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 222.2 84% 4.9%; /* Dark text */
+
+    --card: 0 0% 100%; /* White card background */
+    --card-foreground: 222.2 84% 4.9%; /* Dark card text */
+
+    --popover: 0 0% 100%; /* White popover background */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark popover text */
+
+    --primary: 222.2 47.4% 11.2%; /* Primary color */
+    --primary-foreground: 210 40% 98%; /* Light text on primary */
+
+    --secondary: 210 40% 96.1%; /* Secondary color */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on secondary */
+
+    --muted: 210 40% 96.1%; /* Muted background */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Muted text */
+
+    --accent: 210 40% 96.1%; /* Accent background */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Dark text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* Destructive/error color */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive */
+
+    --border: 214.3 31.8% 91.4%; /* Border color */
+    --input: 214.3 31.8% 91.4%; /* Input border color */
+    --ring: 222.2 84% 4.9%; /* Focus ring color */
+
+    --radius: 0.5rem; /* Border radius */
+  }
+
+  /* Dark theme overrides */
+  .dark {
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 210 40% 98%; /* Light text */
+
+    --card: 222.2 84% 4.9%; /* Dark card background */
+    --card-foreground: 210 40% 98%; /* Light card text */
+
+    --popover: 222.2 84% 4.9%; /* Dark popover background */
+    --popover-foreground: 210 40% 98%; /* Light popover text */
+
+    --primary: 210 40% 98%; /* Light primary color */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark text on primary */
+
+    --secondary: 217.2 32.6% 17.5%; /* Dark secondary color */
+    --secondary-foreground: 210 40% 98%; /* Light text on secondary */
+
+    --muted: 217.2 32.6% 17.5%; /* Dark muted background */
+    --muted-foreground: 215 20.2% 65.1%; /* Light muted text */
+
+    --accent: 217.2 32.6% 17.5%; /* Dark accent background */
+    --accent-foreground: 210 40% 98%; /* Light text on accent */
+
+    --destructive: 0 62.8% 30.6%; /* Dark destructive/error color */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive */
+
+    --border: 217.2 32.6% 17.5%; /* Dark border color */
+    --input: 217.2 32.6% 17.5%; /* Dark input border color */
+    --ring: 212.7 26.8% 83.9%; /* Light focus ring color */
+  }
+}
+
+/* Apply base styles to all elements */
+@layer base {
+  * {
+    @apply border-border; /* Apply border color to all elements */
+  }
+  body {
+    @apply bg-background text-foreground; /* Apply background and text color to body */
+  }
+}
+

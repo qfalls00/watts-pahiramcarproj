@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Set the base URL for module resolution
+    "paths": {
+      "@/*": ["./*"] // Define path alias for imports starting with @/
+    }
+  }
+}
+
